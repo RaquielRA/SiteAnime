@@ -1,0 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Comic+Neue:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    font-family: "Comic Neue", cursive;
+    scroll-behavior: smooth;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Comic Neue", cursive;
+    background-color: #f1f1f1;
+    overflow-x: hidden;
+    color: #090909;
+}

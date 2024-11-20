@@ -1,0 +1,202 @@
+/* Estilos gerais */
+a {
+    text-decoration: none;
+  }
+  
+  
+  
+  #theme-btn {
+    font-size: 20px;
+    padding: 10px 20px;
+    cursor: pointer;
+    border: none;
+    color: #f1f1f1;
+    margin-right: 75px;
+  }
+  
+  /*#fullscreen-btn:hover {
+    background-color: #1c1c1c;
+  }
+  
+  #fullscreen-btn:active {
+    background-color: #252525;
+  }*/
+  
+  
+  .nav {
+    position: fixed;
+    z-index: 1000;
+    width: 100vw;
+    height: 70px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    background-color: rgba(9, 9, 9, 0.800);
+    /* Cor de fundo inicial */
+    transition: background-color 0.3s ease;
+    backdrop-filter: blur(20px);
+  }
+  
+  .logo img {
+    width: 134px;
+    height: 57px;
+  }
+  
+  .logo {
+    padding: 2px 50px;
+    margin-left: 50px;
+  }
+  
+  .nav-list {
+    display: flex;
+    gap: 32px; /*distancia*/
+    list-style: none;
+    align-items: center;
+    
+  }
+  
+  /* Estilo inicial dos links */
+  .nav-list a {
+    font-size: 18px;
+    color: #f1f1f1;
+    /* Cor inicial do texto */
+    position: relative;
+    transition: background-color 0.3s ease, transform 0.3s ease, color 0.3s ease;
+    /* Animação de fundo, texto e transformação */
+    border: 2px solid transparent;
+    /* Borda inicial */
+    border-radius: 10px;
+    /* Bordas arredondadas iniciais */
+    padding: 5px 5px;
+    text-shadow: 0 0 10px #a5a5a585;
+  }
+  
+  
+  
+  /* Efeito de cores do arco-íris quando o link é selecionado */
+  .nav-list a:active,
+  /* Quando o link for clicado */
+  .nav-list a:hover {
+    /* Ou quando o mouse passar sobre o link */
+    background-color: #ff161f;
+    /* Gradiente vibrante */
+    color: #ffffff;
+    /* Texto preto */
+    border-radius: 15px;
+    /* Bordas arredondadas maiores */
+    transform: scale(1.1);
+    /* Efeito de aumento */
+  }
+  
+  /* Estilos para quando um link for clicado */
+  .nav-list a.selected {
+    background-color: #ff161f;
+    /* Gradiente mais vibrante */
+    color: #ffffff;
+    /* Texto preto */
+    border-radius: 15px;
+    /* Bordas arredondadas maiores */
+  }
+  
+  /* Para um fundo animado na navbar, quando a navbar for ativa */
+  .nav.active {
+    background-color: #333;
+    /* Cor de fundo alterada para um fundo escuro */
+  }
+  
+  /* Estilos para a navegação móvel */
+  .hamburger {
+    z-index: 11;
+    display: none;
+    border: none;
+    background: none;
+    border-top: 3px solid #f0f0f0;
+    cursor: pointer;
+  }
+  
+  .hamburger::after,
+  .hamburger::before {
+    content: " ";
+    display: block;
+    width: 30px;
+    height: 3px;
+    background: #f0f0f0;
+    margin-top: 5px;
+    position: relative;
+    transition: 0.3s;
+  }
+  
+  @media (max-width: 750px) {
+  
+    .hamburger {
+      margin-right: 40px;
+      display: block;
+      z-index: 11;
+    }
+  
+    .nav-list {
+      position: fixed;
+      z-index: 10;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 50vh;
+      background: rgba(9, 9, 9, 0.800);
+      clip-path: circle(100px at 90% -50%);
+      transition: 1s ease-out;
+      flex-direction: column;
+      justify-content: space-around;
+      align-items: center;
+      gap: 0;
+      pointer-events: none;
+      backdrop-filter: blur(5px);
+    }
+  
+    .nav-list a {
+      font-size: 24px;
+      opacity: 0;
+    }
+  
+    .nav-list li:nth-child(1) a {
+      transition: 0.5s 0.2s;
+    }
+  
+    .nav-list li:nth-child(2) a {
+      transition: 0.5s 0.3s;
+    }
+  
+    .nav-list li:nth-child(3) a {
+      transition: 0.5s 0.4s;
+    }
+  
+    .nav-list li:nth-child(4) a {
+      transition: 0.5s 0.5s;
+    }
+  
+    /* Estilos ativos para o menu móvel */
+    .nav.active .nav-list {
+      clip-path: circle(800px at 90% -10%);
+      pointer-events: all;
+    }
+  
+    .nav.active .nav-list a {
+      opacity: 1;
+    }
+  
+    .nav.active .hamburger {
+      position: fixed;
+      top: 26px;
+      right: 16px;
+      border-top-color: transparent;
+    }
+  
+    .nav.active .hamburger::before {
+      transform: rotate(135deg);
+    }
+  
+    .nav.active .hamburger::after {
+      transform: rotate(-135deg);
+      top: -7px;
+    }
+  }
