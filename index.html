@@ -8,9 +8,13 @@
   <link rel="stylesheet" href="css/navbar.css">
   <link rel="stylesheet" href="css/inicio.css">
   <link rel="stylesheet" href="css/personagens.css">
-  <link rel="stylesheet" href="css/epsodio.css">
+  <link rel="stylesheet" href="css/episodio.css">
   <link rel="stylesheet" href="css/contatos.css">
-  <script defer src="anime.js"></script>
+  <script defer src="js/navbar.js"></script>
+  <script defer src="js/inicio.js"></script>
+  <script defer src="js/personagens.js"></script>
+  <script defer src="js/episodio.js"></script>
+  <script defer src="js/contatos.js"></script>
   <title>Site Anime</title>
 </head>
 
@@ -37,14 +41,12 @@
           um garoto problemático que morre ao salvar uma criança, mas ganha uma nova chance como Detetive Espiritual.
           Agora, ele enfrenta forças sobrenaturais, desvendando mistérios entre o mundo humano e o espiritual.</h1>
         <p>Assista no YouTube</p>
-
       </div>
       <div class="inicio">
         <div class="imginicio"><img src="img/Personagens.png" alt=""></div>
       </div>
     </div>
   </section>
-
 
   <section id="port">
     <div class="containerport">
@@ -86,6 +88,114 @@
       </div>
     </div>
   </section>
+
+
+  <div class="containerepisodio">
+    <div class="epum">
+      <div class="txtepum">
+        <h1>Episódio 1</h1>
+        <h2>Descrição</h2>
+        <p>Veja o primeiro episódio da nossa série!</p>
+      </div>
+      <div class="popupum video-container">
+        <img src="img/fundoplay.png" alt="Episódio 1" class="thumbnail">
+        <button class="open-popup" data-video="https://www.youtube.com/embed/dQw4w9WgXcQ">▶</button>
+      </div>
+    </div>
+
+    <div class="epdois">
+      <div class="popupdois video-container">
+        <img src="img/fundoplay.png" alt="Episódio 2" class="thumbnail">
+        <button class="open-popup" data-video="https://www.youtube.com/embed/oHg5SJYRHA0">▶</button>
+      </div>
+      <div class="txtepdois">
+        <h1>Episódio 2</h1>
+        <h2>Descrição</h2>
+        <p>Confira o segundo episódio emocionante.</p>
+      </div>
+    </div>
+
+    <div class="eptres">
+      <div class="txteptres">
+        <h1>Episódio 3</h1>
+        <h2>Descrição</h2>
+        <p>Descubra o terceiro episódio da série.</p>
+      </div>
+      <div class="popuptres video-container">
+        <img src="img/fundoplay.png" alt="Episódio 3" class="thumbnail">
+        <button class="open-popup" data-video="https://www.youtube.com/embed/tgbNymZ7vqY">▶</button>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+  <section id="contatos">
+    <div class="containercontatos">
+      <div class="formulario" id="formulario">
+        <h1>Formulário</h1>
+
+        <div class="formulario_main">
+          <form action="#" id="formContato">
+            <div class="input">
+              <p>Nome</p>
+              <input type="text" id="nome" placeholder="seu nome">
+            </div>
+
+            <div class="input">
+              <p>Seu melhor email</p>
+              <input type="email" id="email" placeholder="seu email">
+            </div>
+
+            <div class="input">
+              <p>Deixe uma mensagem</p>
+              <input type="text" id="mensagem" placeholder="sua mensagem">
+            </div>
+
+            <a href="#" class="formulario_btn" id="submitBtn">Enviar</a>
+          </form>
+        </div>
+
+        <!-- Mensagem de Feedback -->
+        <div id="feedbackMessage" class="feedback"></div>
+
+
+        <div class="txtcontatos">
+          <h1>Contatos:</h1>
+        </div>
+        <div class="footercontatos">
+          <div class="facebook">
+            <footer>
+              <a href="https://www.facebook.com/raquiel.ribeiro?locale=pt_BR" target="_blank" rel="noopener noreferrer">
+                <p>Facebook</p>
+              </a>
+            </footer>
+          </div>
+          <div class="instagram">
+            <a href="https://www.instagram.com/rak.ralex/" target="_blank" rel="noopener noreferrer">
+              <p>Instagram</p>
+            </a>
+          </div>
+
+          <div class="whatsapp">
+            <a href="https://www.facebook.com/raquiel.ribeiro?locale=pt_BR" target="_blank" rel="noopener noreferrer">
+              <p>WhatsApp</p>
+            </a>
+          </div>
+
+          <div class="linkedin">
+            <a href="https://www.facebook.com/raquiel.ribeiro?locale=pt_BR" target="_blank" rel="noopener noreferrer">
+              <p>Linkedin</p>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
 
 
 </body>

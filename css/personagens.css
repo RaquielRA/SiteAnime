@@ -3,6 +3,7 @@
     height: 898px;
     display: grid;
     grid-template-rows: 1fr 4fr;
+    z-index: 10;
 }
 
 .txtport {
@@ -13,6 +14,7 @@
 }
 
 .cardport {
+    z-index: 1000;
     transition: all 0.3s ease;
     transform: scale(1);
     /* Estado normal */
@@ -29,7 +31,7 @@
     width: 300px;
     height: 400px;
     border-radius: 0px;
-    box-shadow: 0 0 10px #a5a5a585;
+    box-shadow: 0 0 10px #1515159e;
     background-color: #101010;
     border: solid 1px #8a8a8a;
     color: #f1f1f1;
@@ -40,7 +42,7 @@
 .imgP img {
     padding: 0px 19px;
     width: auto;
-    filter: drop-shadow(10px 10px 15px rgba(0, 0, 0, 0.5));
+    filter: drop-shadow(10px 10px 15px rgba(0, 0, 0, 0.769));
 }
 
 .cardport h1 {
@@ -139,9 +141,9 @@
 .cardum.expanded,
 .carddois.expanded,
 .cardtres.expanded {
+    position: fixed;
     width: 80vw;
     height: 90vh;
-    position: fixed;
     top: 0;
     left: 0;
     z-index: 1000;
