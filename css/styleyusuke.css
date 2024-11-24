@@ -1,0 +1,37 @@
+@import url('https://fonts.googleapis.com/css2?family=Comic+Neue:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    font-family: "Comic Neue", cursive;
+    scroll-behavior: smooth;
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: #000b02;
+    background-image: url(../img/backgroundyusuke.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.fechar .fecharButton{
+background: #008418;}
+
+.fechar .fecharButton:active{
+background: #005b11;} 
+
+.c1, .c2, .c3, .c4, .c5, .c6 {
+background-color: rgba(0, 11, 2, 0.500);}
+
+.p1, .p2, .p3, .p4, .p5, .p6, .p7{
+background-color:  rgba(0, 11, 2, 0.500);
+}
+
+.h {
+background-color:  rgba(0, 11, 2, 0.500);}
+
+.t {
+background-color:  rgba(0, 11, 2, 0.500);}
+
+.g {
+background-color:  rgba(0, 11, 2, 0.500);}

@@ -1,0 +1,159 @@
+
+
+.fechar{
+    display: flex;
+    justify-content: end;
+    width: 100%;
+    transform: translateY(30px) translateX(-14px);
+    transition: transform 1.0s;
+}
+
+.fechar .fecharButton{
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    border-radius: 50px; 
+    width: 32px;
+    height: 32px;
+    cursor: pointer; 
+}
+
+.fechar button{
+    border: none;          /* Remove a borda */     /* Remove o background */
+    color: #f1f1f1;        /* Mantém a cor do texto herdada */
+    font-size: 20px;
+}
+
+.fechar .fecharButton:hover{
+    box-shadow: 0 0 10px #ffffff, 0 0 20px #ffffff; /* Brilho */
+}
+
+
+.containerdetalhes {
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+    grid-template-rows: 1fr;
+    width: auto;
+    height: 880px;
+    align-items: center;
+}
+
+.detalhestxt{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 6fr;
+    width: 520px;
+    height: 700px; 
+    align-items: center;
+    justify-items: center;
+    background-image: linear-gradient(to right, rgba(22, 22, 22, 0.350), rgba(63, 62, 62, 0.350));
+}
+
+.navdet {
+    display: flex;             /* Ativa o flexbox */
+    justify-content: space-between; /* Espaço entre o primeiro e o último */
+    align-items: center;       /* Alinha verticalmente os itens */
+    width: 460px;
+}
+
+.navdet button{
+    transition: opacity 0.3s; 
+    opacity: 0.3;
+    border: none;          /* Remove a borda */
+    background: none;      /* Remove o background */
+    color: #f1f1f1;        /* Mantém a cor do texto herdada */
+    cursor: pointer;       /* Mostra o cursor como "pointer" ao passar sobre o botão */
+    padding: 0; 
+    font-size: 17px;
+
+}
+
+.navdet button.selected {
+    opacity: 1;                  /* Opacidade 100% quando o botão é selecionado */
+}
+
+.navdet button:hover {
+    opacity: 0.9;      /* Fundo mais claro no hover */
+    text-shadow: 0 0 10px #ffffff, 0 0 20px #ffffff; /* Brilho */
+}
+
+.infdet{
+    width: 480px;
+    height: 580px;
+    align-items: center;
+    justify-items: center;
+    
+}
+.infdet p{
+font-size: 20px;
+color: #c3c3c3;
+}
+
+.c1, .c2, .c3, .c4, .c5, .c6 {
+    width: 460px;
+    height: 88px;
+    margin-bottom: 10px;
+}
+
+.p1, .p2, .p3, .p4, .p5, .p6, .p7{
+    width: 460px;
+    height: 74px;
+    margin-bottom: 10px;
+}
+
+.caracteristicas p {
+    display: flex;
+    justify-content: start; /* Espaço entre o primeiro e o último */
+    align-content: center;
+    padding: 10px 10px;
+    font-size: 17px;
+}
+
+.poderes p {
+    display: flex;
+    justify-content: start; /* Espaço entre o primeiro e o último */
+    align-content: center;
+    padding: 10px 10px;
+    font-size: 17px;
+}
+
+.historia p {
+    display: flex;
+    justify-content: start; /* Espaço entre o primeiro e o último */
+    align-content: center;
+    padding: 70px 30px;
+    font-size: 18px;
+    text-align: justify;
+}
+
+.h {
+    width: 460px;
+    height: 570px;
+}
+
+.t {
+    width: 460px;
+    height: 570px;
+}
+
+.t img{
+    width: 430px;
+    padding: 15px 0px 15px 15px;
+}
+
+.t h1{
+    color: #f1f1f1;
+    font-size: 20px;
+    padding: 0px 15px;
+}
+
+.t p{
+    font-size: 15px;
+    text-align: justify;
+    padding: 13px;
+}
+
+.g {
+    width: 460px;
+    height: 570px;
+}
