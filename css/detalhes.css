@@ -6,6 +6,8 @@
     width: 100%;
     transform: translateY(30px) translateX(-14px);
     transition: transform 1.0s;
+    position: fixed;
+    z-index: 1001;
 }
 
 .fechar .fecharButton{
@@ -22,6 +24,7 @@
     border: none;          /* Remove a borda */     /* Remove o background */
     color: #f1f1f1;        /* Mantém a cor do texto herdada */
     font-size: 20px;
+    
 }
 
 .fechar .fecharButton:hover{

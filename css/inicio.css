@@ -19,7 +19,21 @@
     padding: 13px 20px;
     color: #f1f1f1;
     border-radius: 50px;
+    cursor: pointer;
+    text-align: center;
+    display: inline-block;
+    text-decoration: none;
 }
+
+.txtinicio p:hover {
+    background-color: #be151a;
+}
+
+.txtinicio a {
+    text-decoration: none;
+    color: inherit;
+}
+
 
 .txtinicio h1 {
     font-size: 22px;

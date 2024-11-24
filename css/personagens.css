@@ -16,8 +16,6 @@
 
 .cardport {
     z-index: 1000;
-    transition: all 0.3s ease;
-    transform: scale(1);
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr;
@@ -26,52 +24,24 @@
     margin-left: 200px;
     margin-right: 200px;
 }
+
 .cardport h1 {
     display: flex;
     justify-content: center;
     padding: 20px 0px;
     font-size: 22px;
 }
+
 .cardum,
 .carddois,
 .cardtres {
     width: 300px;
     height: 400px;
     border-radius: 20px;
-    border: 5px solid #f1f1f1;
+    border: 3px solid #f1f1f1;
     box-shadow: 0 0 10px #1515159e;
     background-color: #101010;
     color: #f1f1f1;
-}
-
-/* Fundo com ::after */
-.cardum .imgP::after,
-.carddois .imgP::after,
-.cardtres .imgP::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 262px;
-    height: 249px;
-    margin: 19px;
-    background-color: transparent;
-    z-index: -1;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-    transition: all 0.3s ease;
-}
-
-.cardum .imgP::after {
-    background-color: #941329;
-}
-
-.carddois .imgP::after {
-    background-color: #1b7612;
-}
-
-.cardtres .imgP::after {
-    background-color: #330f6d;
 }
 
 .imgP {
@@ -90,15 +60,20 @@
     justify-self: center;
 }
 
-/* Hover para expandir card */
+/* Removendo o hover para expandir card */
+.cardum,
+.carddois,
+.cardtres {
+    width: 300px;
+    height: 500px; /* Remover a transição de hover */
+}
 .cardum:hover,
 .carddois:hover,
 .cardtres:hover {
-    width: 300px;
-    height: 490px;
-    transition: all 1.0s ease;
-    transform: scale(1.09);
+    transform: translateY(-30px);
+    transition: transform 1.0s;
 }
+
 
 /* Botão e parágrafo */
 .cardum .txtcardum,
@@ -113,16 +88,16 @@
     visibility: hidden;
 }
 
-.cardum:hover .txtcardum,
-.carddois:hover .txtcarddois,
-.cardtres:hover .txtcardtres {
+.cardum .txtcardum,
+.carddois .txtcarddois,
+.cardtres .txtcardtres {
     opacity: 1;
     visibility: visible;
 }
 
-.cardum:hover .txtcardum button,
-.carddois:hover .txtcarddois button,
-.cardtres:hover .txtcardtres button {
+.cardum .txtcardum button,
+.carddois .txtcarddois button,
+.cardtres .txtcardtres button {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -134,19 +109,28 @@
     border: none;
     border-radius: 50px;
     background: #f1f1f1;
-    transition: all 1.0s ease 0.3s;
 }
 
-.cardum:hover .txtcardum button img,
-.carddois:hover .txtcarddois button img,
-.cardtres:hover .txtcardtres button img {
+.cardport button:hover{
+    transform: translateY(-3px);
+    transition: transform 0.3s;
+    box-shadow: 0 0 3px #ffffff; 
+}
+
+.cardport button:active{
+    box-shadow: 0 0 7px #ffffff;
+}
+
+.cardum .txtcardum button img,
+.carddois .txtcarddois button img,
+.cardtres .txtcardtres button img {
     width: 18px;
     height: 18px;
 }
 
-.cardum:hover .txtcardum p,
-.carddois:hover .txtcarddois p,
-.cardtres:hover .txtcardtres p {
+.cardum .txtcardum p,
+.carddois .txtcarddois p,
+.cardtres .txtcardtres p {
     text-align: justify;
     font-size: 14px;
     padding: 19px;
@@ -188,14 +172,5 @@
         width: 350px;
         height: auto;
         filter: drop-shadow(10px 10px 15px rgba(0, 0, 0, 0.5));
-    }
-
-    .cardum:hover .imgP img,
-    .carddois:hover .imgP img,
-    .cardtres:hover .imgP img {
-        width: 300px;
-        height: auto;
-        padding: 0px 50px;
-        transform: translateY(-20px);
     }
 }

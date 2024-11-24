@@ -1,6 +1,6 @@
 .containercontatos {
     width: 100vw;
-    height: 900px;
+    height: 600px;
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 4fr;
@@ -60,7 +60,6 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    color: #000;
     font-size: 40px;
     margin-bottom: 50px;
   }
@@ -120,7 +119,7 @@
   /* Botão de Enviar */
   .formulario .formulario_main form .formulario_btn {
     padding: 10px 0;
-    background: #252525;
+    background: #5b5b5b;
     color: white;
     width: 20%;
     text-align: center;
