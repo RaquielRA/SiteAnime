@@ -1,5 +1,5 @@
 /* Configurações principais */
-.containerport {
+.containerpersonagem {
     width: 100vw;
     height: 898px;
     display: grid;
@@ -7,25 +7,26 @@
     z-index: 10;
 }
 
-.txtport {
+
+
+.txtpersonagem {
     font-size: 35px;
     display: flex;
     justify-content: center;
     align-items: end;
 }
 
-.cardport {
+.cardpersonagem {
+    width: 100%;
     z-index: 1000;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr;
     justify-items: center;
     align-items: center;
-    margin-left: 200px;
-    margin-right: 200px;
 }
 
-.cardport h1 {
+.cardpersonagem h1 {
     display: flex;
     justify-content: center;
     padding: 20px 0px;
@@ -35,9 +36,10 @@
 .cardum,
 .carddois,
 .cardtres {
+    margin-top: 40px;
     width: 300px;
     height: 400px;
-    border-radius: 20px;
+    border-radius: 10px;
     border: 3px solid #f1f1f1;
     box-shadow: 0 0 10px #1515159e;
     background-color: #101010;
@@ -65,8 +67,10 @@
 .carddois,
 .cardtres {
     width: 300px;
-    height: 500px; /* Remover a transição de hover */
+    height: 500px;
+    /* Remover a transição de hover */
 }
+
 .cardum:hover,
 .carddois:hover,
 .cardtres:hover {
@@ -111,13 +115,13 @@
     background: #f1f1f1;
 }
 
-.cardport button:hover{
+.cardpersonagem button:hover {
     transform: translateY(-3px);
     transition: transform 0.3s;
-    box-shadow: 0 0 3px #ffffff; 
+    box-shadow: 0 0 3px #ffffff;
 }
 
-.cardport button:active{
+.cardpersonagem button:active {
     box-shadow: 0 0 7px #ffffff;
 }
 
@@ -137,21 +141,21 @@
 }
 
 /* Responsividade */
-@media (max-width: 1200px) {
-    .txtport h1 {
-        font-size: 50px;
-        transition: none;
-        display: flex;
-        justify-content: center;
-        align-items: start;
-    }
+@media (max-width: 1070px) {
 
-    .containerport {
+    .containerpersonagem {
         width: 100vw;
-        height: 300vh;
+        height: 2200px;
+        display: grid;
+        grid-template-rows: 1fr 9fr;
     }
 
-    .cardport {
+
+    .txtpersonagem h1 {
+        font-size: 50px;
+    }
+
+    .cardpersonagem {
         display: grid;
         grid-template-columns: 1fr;
         grid-template-rows: 1fr 1fr 1fr;
@@ -160,17 +164,31 @@
         align-items: center;
     }
 
-    .cardum,
-    .carddois,
-    .cardtres {
-        width: 400px;
-        height: 300px;
+}
+
+@media (max-width: 700px) {
+
+    .txtpersonagem h1 {
+        font-size: 45px;
     }
 
-    .imgP img {
-        padding: 5px 25px;
-        width: 350px;
-        height: auto;
-        filter: drop-shadow(10px 10px 15px rgba(0, 0, 0, 0.5));
+}
+
+@media (max-width: 600px) {
+
+    .txtpersonagem h1 {
+        font-size: 35px;
     }
+
+}
+
+@media (max-width: 500px) {
+
+    .txtpersonagem h1 {
+        font-size: 35px;
+        width: 300px;
+        height: 100px;
+        text-align: center;
+    }
+
 }

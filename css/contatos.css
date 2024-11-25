@@ -1,57 +1,14 @@
 .containercontatos {
     width: 100vw;
-    height: 600px;
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr 4fr;
+    height: auto;
+    overflow-y:hidden;
   }
   
-  .txtcontatos {
-    font-size: 30px;
-    display: flex;
-    justify-content: center;
-    align-items: end;
-    margin-top: 70px;
-    margin-bottom: 50px;
-  }
-  
-  .footercontatos {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows: 1fr;
-    justify-items: center;
-    align-content: space-between;
-  }
-  
-  .facebook, .instagram, .whatsapp, .linkedin {
-    padding: 0px 20px;
-    border-radius: 50px;
-    border: solid 1px black;
-  }
-  
-  .facebook:hover, .instagram:hover, .whatsapp:hover, .linkedin:hover {
-    background-color: #cccccc;
-    cursor: pointer;
-  }
-  
-  .footercontatos a {
-    margin-top: 10px;
-    margin: 10px;
-    user-select: none;
-    font-family: "Arapey", serif;
-    list-style-type: none;
-    color: #121212;
-    text-decoration: none;
-    padding-right: 30px;
-    font-size: 25px;
-  }
-  
-  /* Formulário */
+
   .formulario {
     width: 100%;
     height: 100vh;
     padding: 70px 0;
-    overflow: hidden;
     background-size: cover;
     background-position: center;
   }
@@ -170,41 +127,30 @@
       grid-gap: 0 10px;
     }
   
-    .txtcontatos {
-      font-size: 30px;
-      display: flex;
-      justify-content: center;
-      align-items: end;
+    .formulario .formulario_main form .input input {
+      width: 500px;
+      height: 55px;
     }
-  
-    .footercontatos {
-      display: grid;
-      grid-template-columns: 1fr 1fr 1fr 1fr;
-      grid-template-rows: 1fr;
-      justify-items: center;
-      align-content: space-between;
+
+    .formulario h1 {
+      overflow-y: hidden;
+      margin-bottom: 50px;
     }
-  
-    .facebook, .instagram, .whatsapp, .linkedin {
-      padding: 0px 20px;
-      border-radius: 30px;
-      border: solid 1px black;
-    }
-  
-    .facebook:hover, .instagram:hover, .whatsapp:hover, .linkedin:hover {
-      background-color: #cccccc;
-      cursor: pointer;
-    }
-  
-    .footercontatos a {
-      margin-top: 10px;
-      margin: 10px;
-      user-select: none;
-      list-style-type: none;
-      color: #121212;
-      text-decoration: none;
-      padding-right: 30px;
-      font-size: 10px;
-    }
+
   }
   
+  @media (max-width: 600px) {
+    .formulario .formulario_main form .input input {
+      width: 400px;
+      height: 55px;
+    }
+
+  }
+
+  @media (max-width: 420px) {
+    .formulario .formulario_main form .input input {
+      width: 315px;
+      height: 55px;
+    }
+
+  }

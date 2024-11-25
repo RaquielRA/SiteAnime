@@ -9,7 +9,6 @@ function mostrarSeção(seçãoId) {
     document.getElementById("poderes").style.display = "none";
     document.getElementById("historia").style.display = "none";
     document.getElementById("transformacoes").style.display = "none";
-    document.getElementById("galeria").style.display = "none";
 
     // Exibe a seção selecionada
     document.getElementById(seçãoId).style.display = "block";
