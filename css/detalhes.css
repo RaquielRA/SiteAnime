@@ -1,3 +1,5 @@
+/*botao para fechar*/
+
 .fechar {
     display: flex;
     justify-content: end;
@@ -20,19 +22,15 @@
 
 .fechar button {
     border: none;
-    /* Remove a borda */
-    /* Remove o background */
     color: #f1f1f1;
-    /* Mantém a cor do texto herdada */
     font-size: 20px;
-
 }
 
 .fechar .fecharButton:hover {
     box-shadow: 0 0 10px #ffffff, 0 0 20px #ffffff;
-    /* Brilho */
 }
 
+/* imagem de fundo principal */
 .detalhesimg {
     height: 100%;
     display: flex;
@@ -45,15 +43,8 @@
     object-fit: cover;
 }
 
-.gridtxt {
-    display: grid;
-    justify-items: center;
-    align-items: center;
-    width: 100%;
-    height: 100%;
-    ;
-}
 
+/*container abrigando classes de texto e navegação entre as classes*/
 .containerdetalhes {
     display: grid;
     grid-template-columns: 3fr 2fr;
@@ -62,6 +53,43 @@
     height: auto;
     justify-items: center;
     align-items: center;
+}
+
+/*navegação entre as classes*/
+.navdet {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 35vw;
+}
+
+.navdet button {
+    transition: opacity 0.3s;
+    opacity: 0.3;
+    border: none;
+    background: none;
+    color: #f1f1f1;
+    cursor: pointer;
+    padding: 0;
+    font-size: 1.5vw;
+}
+
+.navdet button.selected {
+    opacity: 1;
+}
+
+.navdet button:hover {
+    opacity: 0.9;
+    text-shadow: 0 0 10px #ffffff, 0 0 20px #ffffff;
+}
+
+/* grid para organizar as classes de texto */
+.gridtxt {
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    width: 100%;
+    height: 90%;
 }
 
 .detalhestxt {
@@ -75,50 +103,12 @@
     background-image: linear-gradient(to right, rgba(22, 22, 22, 0.350), rgba(63, 62, 62, 0.350));
 }
 
-.navdet {
-    display: flex;
-    /* Ativa o flexbox */
-    justify-content: space-between;
-    /* Espaço entre o primeiro e o último */
-    align-items: center;
-    /* Alinha verticalmente os itens */
-    width: 35vw;
-}
-
-.navdet button {
-    transition: opacity 0.3s;
-    opacity: 0.3;
-    border: none;
-    /* Remove a borda */
-    background: none;
-    /* Remove o background */
-    color: #f1f1f1;
-    /* Mantém a cor do texto herdada */
-    cursor: pointer;
-    /* Mostra o cursor como "pointer" ao passar sobre o botão */
-    padding: 0;
-    font-size: 1.5vw;
-
-}
-
-.navdet button.selected {
-    opacity: 1;
-    /* Opacidade 100% quando o botão é selecionado */
-}
-
-.navdet button:hover {
-    opacity: 0.9;
-    /* Fundo mais claro no hover */
-    text-shadow: 0 0 10px #ffffff, 0 0 20px #ffffff;
-    /* Brilho */
-}
 
 .infdet {
     width: 100%;
     height: 580px;
     align-items: center;
     justify-items: center;
-
 }
 
 .infdet p {
@@ -126,6 +116,8 @@
     color: #c3c3c3;
 }
 
+
+/*configurações especificas das classes*/
 .caracteristicas {
     width: 100%;
     height: 100%;
@@ -176,7 +168,6 @@
 .caracteristicas p {
     display: flex;
     justify-content: start;
-    /* Espaço entre o primeiro e o último */
     align-content: center;
     padding: 10px 10px;
     font-size: 17px;
@@ -185,7 +176,6 @@
 .poderes p {
     display: flex;
     justify-content: start;
-    /* Espaço entre o primeiro e o último */
     align-content: center;
     padding: 10px 10px;
     font-size: 17px;
@@ -194,7 +184,6 @@
 .historia p {
     display: flex;
     justify-content: start;
-    /* Espaço entre o primeiro e o último */
     align-content: center;
     padding: 70px 30px;
     font-size: 18px;
@@ -217,7 +206,7 @@
 
 .t img {
     width: 26vw;
-    padding: 15px 0px 15px 15px;
+    padding: 15px 0px 2vw 2vw;
 }
 
 .t h1 {
@@ -233,9 +222,8 @@
 }
 
 
-
+/* Responsividade */
 @media (max-width: 1000px) {
-
     .containerdetalhes {
         display: grid;
         grid-template-columns: 1fr;
@@ -258,27 +246,13 @@
 
     .navdet {
         display: flex;
-        /* Ativa o flexbox */
         justify-content: space-between;
-        /* Espaço entre o primeiro e o último */
         align-items: center;
-        /* Alinha verticalmente os itens */
         width: 100%;
         height: 30%;
     }
 
     .navdet button {
-        transition: opacity 0.3s;
-        opacity: 0.3;
-        border: none;
-        /* Remove a borda */
-        background: none;
-        /* Remove o background */
-        color: #f1f1f1;
-        /* Mantém a cor do texto herdada */
-        cursor: pointer;
-        /* Mostra o cursor como "pointer" ao passar sobre o botão */
-        padding: 0;
         font-size: 3vw;
     }
 
@@ -287,20 +261,18 @@
         height: 90%;
         align-items: center;
         justify-items: center;
-
     }
 
     .infdet p {
-        font-size: 20px;
+        font-size: 18px;
     }
 
-
     .h p {
-        font-size: 24px;
+        font-size: 22px;
     }
 
     .t h1 {
-        font-size: 24px;
+        font-size: 22px;
     }
 
     .c1,
@@ -311,9 +283,6 @@
     .c6 {
         width: 100%;
         height: 12vw;
-        margin-bottom: 10px;
-        margin-left: auto;
-        margin-right: auto;
     }
 
     .p1,
@@ -325,41 +294,29 @@
     .p7 {
         width: 100%;
         height: 10vw;
-        margin-bottom: 10px;
-        margin-left: auto;
-        margin-right: auto;
     }
 
     .h {
         width: 100%;
         height: 100%;
-        margin-left: auto;
-        margin-right: auto;
     }
 
     .t {
         width: 100%;
         height: 100%;
-        margin-left: auto;
-        margin-right: auto;
     }
-
 
     .t img {
         width: 100%;
         padding: 0px;
     }
-
-
 }
 
 @media (max-width: 870px) {
-
     .infdet p {
         font-size: 17px;
     }
 
-
     .h p {
         font-size: 20px;
     }
@@ -367,16 +324,13 @@
     .t h1 {
         font-size: 20px;
     }
-
 }
 
 @media (max-width: 700px) {
-
     .infdet p {
         font-size: 15px;
     }
 
-
     .h p {
         font-size: 18px;
     }
@@ -384,15 +338,12 @@
     .t h1 {
         font-size: 18px;
     }
-
 }
 
 @media (max-width: 570px) {
-
     .infdet p {
         font-size: 12px;
     }
-
 
     .h p {
         font-size: 16px;
@@ -408,11 +359,9 @@
 }
 
 @media (max-width: 500px) {
-
     .infdet p {
         font-size: 10px;
     }
-
 
     .h p {
         font-size: 14px;
@@ -425,15 +374,12 @@
     .t p {
         font-size: 14px;
     }
-
 }
 
 @media (max-width: 480px) {
-
     .infdet p {
         font-size: 8px;
     }
-
 
     .h p {
         font-size: 13px;
@@ -446,11 +392,9 @@
     .t p {
         font-size: 13px;
     }
-
 }
 
 @media (max-width: 412px) {
-
     .infdet p {
         transform: translateY(-7px);
     }

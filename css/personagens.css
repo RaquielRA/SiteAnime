@@ -1,4 +1,4 @@
-/* Configurações principais */
+/* Container para agrupar os card dos personagens */
 .containerpersonagem {
     width: 100vw;
     height: 898px;
@@ -8,7 +8,7 @@
 }
 
 
-
+/*texto titulo da dobra Personagens*/
 .txtpersonagem {
     font-size: 35px;
     display: flex;
@@ -16,6 +16,7 @@
     align-items: end;
 }
 
+/*configurações gerais para agrupar os cards*/
 .cardpersonagem {
     width: 100%;
     z-index: 1000;
@@ -33,6 +34,7 @@
     font-size: 22px;
 }
 
+/*configurações espeficias dos cards*/
 .cardum,
 .carddois,
 .cardtres {
@@ -57,18 +59,30 @@
     padding: 0px 19px;
     width: auto;
     height: 249px;
-    filter: drop-shadow(10px 10px 15px rgba(0, 0, 0, 0.769));
+    filter: drop-shadow(0px 0px 15px rgba(0, 0, 0, 0.700));
     display: flex;
     justify-self: center;
 }
 
-/* Removendo o hover para expandir card */
+.cardum .imgP img:hover {
+    filter: drop-shadow(0px 0px 20px hsla(350, 91%, 53%, 0.700));
+}
+
+.carddois .imgP img:hover {
+    filter: drop-shadow(0px 0px 20px rgba(0, 168, 101, 0.700));
+}
+
+.cardtres .imgP img:hover {
+    filter: drop-shadow(0px 0px 20px rgba(5, 131, 173, 0.700));
+}
+
+
+
 .cardum,
 .carddois,
 .cardtres {
     width: 300px;
     height: 500px;
-    /* Remover a transição de hover */
 }
 
 .cardum:hover,
@@ -79,7 +93,6 @@
 }
 
 
-/* Botão e parágrafo */
 .cardum .txtcardum,
 .carddois .txtcarddois,
 .cardtres .txtcardtres {
@@ -99,6 +112,8 @@
     visibility: visible;
 }
 
+
+/*botao para navegar para a pagina de detalhamento do personagem*/
 .cardum .txtcardum button,
 .carddois .txtcarddois button,
 .cardtres .txtcardtres button {
@@ -139,6 +154,7 @@
     font-size: 14px;
     padding: 19px;
 }
+
 
 /* Responsividade */
 @media (max-width: 1070px) {

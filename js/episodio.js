@@ -10,10 +10,10 @@ buttons.forEach(button => {
     iframe.src = `${videoUrl}?autoplay=1`;
     iframe.allow = "autoplay";
     iframe.frameBorder = "0";
-    iframe.style.width = "100%"; // Ajusta para 100% da largura do container
-    iframe.style.height = "100%"; // Ajusta para 100% da altura do container
+    iframe.style.width = "100%";
+    iframe.style.height = "100%"; 
     iframe.style.maxWidth = "560px"; 
-    iframe.style.maxHeigth = "315px";// Limita a largura máxima
+    iframe.style.maxHeigth = "315px";
 
     // Remove a imagem e o botão temporariamente
     container.querySelector(".thumbnail").style.display = "none";
@@ -43,23 +43,20 @@ buttons.forEach(button => {
 
 // Função para ajustar o iframe com base na largura da tela
 function adjustIframeSize(iframe) {
-  // Verifique a largura da tela
   const screenWidth = window.innerWidth;
 
   if (screenWidth <= 650) {
     iframe.style.width = '344px';
     iframe.style.height = '193px';
-    // Definido para 344px para telas pequenas
   } else {
-    iframe.style.width = '100%'; // O iframe ocupará 100% da largura disponível
+    iframe.style.width = '100%'; 
     iframe.style.maxWidth = '560px';
-    iframe.style.maxHeigth = '315px'; // Limita o tamanho máximo do iframe
+    iframe.style.maxHeigth = '315px'; 
   }
 }
 
 // Executa a função sempre que a janela for redimensionada
 window.onresize = () => {
-  // Ajusta o iframe de todos os vídeos abertos
   const iframes = document.querySelectorAll("iframe");
   iframes.forEach(iframe => adjustIframeSize(iframe));
 };

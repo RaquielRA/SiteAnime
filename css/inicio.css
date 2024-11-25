@@ -1,3 +1,5 @@
+
+/*container para agrupar elementos da dobra Início*/
 .containerinicio {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -6,12 +8,27 @@
     height: auto;
 }
 
+
+/*classe para agrupar logo, sinopse e botao*/
+.txtinicio {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    justify-items: start;
+    text-align: left;
+    align-items: center;
+}
+
+
+/*logo inicio*/
 .txtinicio img {
     width: 216px;
     height: 92px;
     transform: translateY(70px) translateX(100px)
 }
 
+
+/*texto botao YouTube*/
 .txtinicio p {
     font-size: 18px;
     background-color: #ff161f;
@@ -35,6 +52,7 @@
 }
 
 
+/*texto sinopse do anime*/
 .txtinicio h1 {
     font-size: 22px;
     transform: translateY(30px) translateX(100px);
@@ -42,15 +60,7 @@
     height: 180px;
 }
 
-.txtinicio {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
-    justify-items: start;
-    text-align: left;
-    align-items: center;
-}
-
+/*classe para ajustar imagem inicial*/
 .inicio {
     display: grid;
     justify-items: center;
@@ -63,6 +73,8 @@
     transform: translateY(0px) translateX(0px);
 }
 
+
+/*responsividade*/
 @media (max-width: 1070px) {
 
     .txtinicio img {

@@ -94,8 +94,8 @@
     text-align: center;
     padding: 10px;
     border-radius: 5px;
-    width: auto; /* Ajusta a largura automaticamente */
-    max-width: 600px; /* Limita a largura máxima */
+    width: auto; 
+    max-width: 600px;
     margin-left: auto;
     margin-right: auto;
   }

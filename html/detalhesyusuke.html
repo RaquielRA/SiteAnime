@@ -10,17 +10,23 @@
 </head>
 
 <body>
+
+    <!-- Botão para retornar a página inicial -->
     <div class="fechar">
         <button class="fecharButton" onclick="fecharDetalhes()">
             x
         </button>
     </div>
+
+
+    <!-- Container para agrupar a imagem de fundo principal e as classes de textos -->
     <div class="containerdetalhes">
         <div class="detalhesimg">
             <img src="../img/fundoyusuke.png" alt="">
         </div>
 
 
+        <!-- Botões de navegação entre as classes -->
         <div class="gridtxt">
             <div class="detalhestxt">
                 <div class="navdet">
@@ -36,9 +42,12 @@
                     <button class="traButton" onclick="mostrarSeção('transformacoes')">
                         Transformações
                     </button>
-
                 </div>
+
+                <!-- div para as classes caracteristicas, poderes, história e transformações -->
                 <div class="infdet">
+
+                    <!-- Classe Caracteristicas -->
                     <div id="caracteristicas" class="caracteristicas">
                         <div class="c1">
                             <p>NATURALIDADE: </p>
@@ -64,6 +73,8 @@
                             <p>OCUPAÇÕES: <br>Estudante, Detetive Sobrenatural </p>
                         </div>
                     </div>
+
+                    <!-- Classe Poderes -->
                     <div id="poderes" class="poderes" style="display: none;">
                         <div class="p1">
                             <p>Energia Espiritual (Rei-Ki) <br> Yusuke usa sua energia espiritual para aumentar força,
@@ -93,6 +104,8 @@
                                 vencer adversários mais fortes.</p>
                         </div>
                     </div>
+
+                    <!-- Classe História -->
                     <div id="historia" class="historia" style="display: none;">
                         <div class="h">
                             <p>Yusuke Urameshi era um delinquente juvenil que morre ao salvar uma criança. Após sua
@@ -108,6 +121,8 @@
                             </p>
                         </div>
                     </div>
+
+                    <!-- Classe Tranformações -->
                     <div id="transformacoes" class="transformacoes" style="display: none;">
                         <div class="t">
                             <img src="../img/yusuketransformado.png">

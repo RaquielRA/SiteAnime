@@ -1,10 +1,8 @@
-/* Estilos gerais */
+
+/*configurações gerais da navbar*/
 a {
   text-decoration: none;
-  
 }
-
-
 
 #theme-btn {
   background: none;
@@ -16,9 +14,7 @@ a {
   margin-right: 75px;
 }
 
-
 .nav {
-  
   position: fixed;
   z-index: 1001;
   width: 100vw;
@@ -28,7 +24,6 @@ a {
   align-items: center;
   text-align: center;
   background-color: rgba(9, 9, 9, 0.800);
-  /* Cor de fundo inicial */
   transition: background-color 0.3s ease;
   backdrop-filter: blur(20px);
 }
@@ -44,67 +39,40 @@ a {
 }
 
 .nav-list {
-  
   display: flex;
   gap: 32px;
-  /*distancia*/
   list-style: none;
   align-items: center;
-
 }
 
-/* Estilo inicial dos links */
 .nav-list a {
-  
-  
   font-size: 18px;
   color: #f1f1f1;
-  /* Cor inicial do texto */
   position: relative;
   transition: background-color 0.3s ease, transform 0.3s ease, color 0.3s ease;
-  /* Animação de fundo, texto e transformação */
   border: 2px solid transparent;
-  /* Borda inicial */
   border-radius: 10px;
-  /* Bordas arredondadas iniciais */
   padding: 1px 1px;
   text-shadow: 0 0 10px #a5a5a585;
 }
 
-
-
-/* Efeito de cores do arco-íris quando o link é selecionado */
 .nav-list a:active,
-/* Quando o link for clicado */
 .nav-list a:hover {
-  /* Ou quando o mouse passar sobre o link */
   background-color: #ff161f;
-  /* Gradiente vibrante */
   color: #ffffff;
-  /* Texto preto */
   border-radius: 15px;
-  /* Bordas arredondadas maiores */
-  
-  /* Efeito de aumento */
 }
 
-/* Estilos para quando um link for clicado */
 .nav-list a.selected {
   background-color: #ff161f;
-  /* Gradiente mais vibrante */
   color: #ffffff;
-  /* Texto preto */
   border-radius: 15px;
-  /* Bordas arredondadas maiores */
 }
 
-/* Para um fundo animado na navbar, quando a navbar for ativa */
 .nav.active {
   background-color: #333;
-  /* Cor de fundo alterada para um fundo escuro */
 }
 
-/* Estilos para a navegação móvel */
 .hamburger {
   z-index: 11;
   display: none;
@@ -126,8 +94,9 @@ a {
   transition: 0.3s;
 }
 
-@media (max-width: 950px) {
 
+/*responsividade*/
+@media (max-width: 950px) {
   .nav {
     overflow: visible;
   }
@@ -177,7 +146,6 @@ a {
     transition: 0.5s 0.5s;
   }
 
-  /* Estilos ativos para o menu móvel */
   .nav.active .nav-list {
     clip-path: circle(800px at 90% -10%);
     pointer-events: all;
